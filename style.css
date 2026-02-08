@@ -189,3 +189,93 @@ button:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Responsive Design untuk Mobile & Tablet */
+
+/* Tablet - iPad Portrait & Landscape */
+@media screen and (max-width: 1024px) {
+    .floating-img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .floating-images {
+        gap: 30px;
+    }
+    
+    .floating-images.left {
+        left: 5px;
+    }
+    
+    .floating-images.right {
+        right: 5px;
+    }
+}
+
+/* Mobile - Smartphone Landscape */
+@media screen and (max-width: 768px) {
+    .floating-img {
+        width: 60px;
+        height: 60px;
+        border: 2px solid #fff;
+    }
+    
+    .floating-images {
+        gap: 20px;
+    }
+    
+    .floating-images.left {
+        left: 2px;
+    }
+    
+    .floating-images.right {
+        right: 2px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Mobile - Smartphone Portrait (Kecil) */
+@media screen and (max-width: 480px) {
+    .floating-img {
+        width: 45px;
+        height: 45px;
+        border: 2px solid #fff;
+    }
+    
+    .floating-images {
+        gap: 15px;
+        top: 45%;
+    }
+    
+    .floating-images.left {
+        left: 1px;
+    }
+    
+    .floating-images.right {
+        right: 1px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    .polaroid img {
+        max-width: 220px;
+    }
+    
+    .message-box {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
