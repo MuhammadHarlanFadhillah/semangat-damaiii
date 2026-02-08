@@ -72,6 +72,24 @@ header p {
     box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6),
                 0 0 30px rgba(102, 126, 234, 0.5);
     filter: brightness(1.1);
+    cursor: pointer;
+}
+
+.floating-img.burst {
+    animation: burstAway 0.8s ease-out forwards;
+}
+
+.space-floating-image {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4),
+                0 0 20px rgba(102, 126, 234, 0.3);
+    z-index: 100;
+    animation: spaceFloat 4s ease-in-out infinite;
 }
 
 .floating-images.left .floating-img:nth-child(1) {
@@ -303,6 +321,25 @@ button:active::before {
     0% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-25px) rotate(8deg); }
     100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes burstAway {
+    0% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-500px) scale(0.3);
+    }
+}
+
+@keyframes spaceFloat {
+    0% { transform: translateY(0px) rotateZ(0deg); }
+    25% { transform: translateY(-30px) rotateZ(15deg); }
+    50% { transform: translateY(-60px) rotateZ(-10deg); }
+    75% { transform: translateY(-30px) rotateZ(5deg); }
+    100% { transform: translateY(0px) rotateZ(0deg); }
 }
 
 /* Animasi Muncul Pelan-pelan */
